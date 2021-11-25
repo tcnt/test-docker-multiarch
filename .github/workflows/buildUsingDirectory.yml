@@ -32,7 +32,7 @@ jobs:
       - name: Copy the deploy content to be used in docker copy command
         run: |
           mkdir -p ./testdir/target/assembly 
-          ln -s ./deploy ./testdir/target/assembly
+          cp -r ./deploy/. ./testdir/target/assembly
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
