@@ -48,6 +48,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: quay.io/tcnthomas/simple-multiarch:latest
+          mediaType: application/vnd.docker.distribution.manifest.list.v2+json
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
